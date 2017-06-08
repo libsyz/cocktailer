@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Cocktailer</title>
+  <%= csrf_meta_tags %>
   <head>
-    <title>Cocktailer</title>
-    <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
-  <body>
-    <% flash.each do |key,value| %>
-       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <% end %>
-    <%= yield %>
-  </body>
+<body>
+  <% flash.each do |key,value| %>
+  <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+
+  <% end %>
+  <%= yield %>
+</body>
 </html>
