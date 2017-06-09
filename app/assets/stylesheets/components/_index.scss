@@ -1,0 +1,50 @@
+@import "alert";
+@import "avatars";
+@import "badges";
+@import "separator";
+@import "card";
+
+
+.wrapper-index {
+  background-color: lightgrey;
+}
+
+.button-home {
+  border-color: white;
+  border-radius: 4px;
+  border-width: 4px;
+}
+
+.banner-index {
+  background-color:  #1C1C1F;
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  height: 45vh;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.27);
+}
+
+
+h4, p {
+  bottom: 30px;
+  font-style: 'Bitter', serif;
+  color: white;
+  }
+
+.banner-new {
+  color: white;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  height: 45vh;
+  align-items: center;
+  box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.27);
+}
+
+.wide {
+  width: 100%;
+}

@@ -1,9 +1,14 @@
 
-<h3> Add a dose for <%= @cocktail.name %></h3>
+<div class="banner-new text-center" style="background-image: url('http://cdn.liquor.com/wp-content/uploads/2015/03/placeholder_background.jpg'); background-size: cover; background-position: center center;">
+  <div style="width:300px;">
+  <h3> Add a dose for <%= @cocktail.name %> </h3>
+  </div>
+  <div class="container" style="width:350px;">
 
-
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :ingredient_id, collection: Ingredient.all %>
-  <%= f.button :submit %>
-<% end %>
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.input :description %>
+    <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <%= f.button :submit, class: 'btn btn-primary wide' %>
+  <% end %>
+  </div>
+</div>
