@@ -6,6 +6,7 @@
   <div class="container" style="width:300px;">
     <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :attachinary %>
     <%= f.button :submit, class: "btn btn-primary wide" %>
   <% end %>
   </div>

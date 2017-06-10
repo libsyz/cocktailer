@@ -14,11 +14,13 @@
        </ul>
      </div>
     <div class="col-sm-6">
-      <img src="http://www.unsplash.it/400/400" alt=" ">
+      <% if @cocktail.photo? %>
+        <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+<% end %>
     </div>
    </div>
 </div>
-
+<a> Add new dose</a>
 <div class="banner-index text-center">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
   <h4> <%= "Add a new dose to #{@cocktail.name}" %> </h4>
@@ -26,6 +28,11 @@
   <%= f.input :ingredient_id, collection: Ingredient.all %>
   <%= f.button :submit %>
   <% end %>
+  <%#= simple_form_for @cocktail do |f| %>
+    <%#= f.input :photo, as: :attachinary %>
+    <%#= f.button :submit %>
+  <%# end %>
+
 </div>
 
 <div class="separator">
