@@ -20,7 +20,7 @@
     </div>
    </div>
 </div>
-<a> Add new dose</a>
+
 <div class="banner-index text-center">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
   <h4> <%= "Add a new dose to #{@cocktail.name}" %> </h4>
@@ -36,6 +36,6 @@
 </div>
 
 <div class="separator">
-  <%=  link_to "Back to Home", root_path, class: "btn btn-primary" %>
+  <%=  link_to "Back to List", cocktails_path, class: "btn btn-primary" %>
 
 </div>
